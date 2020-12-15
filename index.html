@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valida email</title>
+</head>
+<body>
+   
+<form method="POST" onsubmit="return validaEmail()">
+
+    <label>Insira um e-mail valido:</label>
+    <input type="text" placeholder="digite seu email" name="email" id="email">
+    <button type="submit">Verificar Email</button>
+    
+</form>
+
+<script>
+ 
+function validarEmail(){
+   var filtro = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w(2,3))+$/;
+   if(!filtro.test(email.value)){
+       alert("Digite  um e-mail valido");
+       email.focus()
+       return false;
+   }
+}
+
+</script>
+
+
+
+</body>
+</html>
